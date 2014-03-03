@@ -11,15 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140303102920) do
+ActiveRecord::Schema.define(version: 20140303152945) do
+
+  create_table "knowledge_base_articles", force: true do |t|
+    t.string   "title"
+    t.string   "slug"
+    t.text     "description"
+    t.integer  "category_id"
+    t.datetime "published_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "knowledge_base_articles", ["category_id"], name: "index_knowledge_base_articles_on_category_id"
 
   create_table "knowledge_base_categories", force: true do |t|
     t.string   "title"
     t.string   "slug"
     t.text     "description"
-    t.boolean  "published"
     t.integer  "category_id"
     t.integer  "position"
+    t.datetime "published_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

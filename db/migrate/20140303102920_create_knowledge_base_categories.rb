@@ -4,9 +4,9 @@ class CreateKnowledgeBaseCategories < ActiveRecord::Migration
       t.string :title
       t.string :slug
       t.text :description
-      t.boolean :published
       t.references :category, index: true
       t.integer :position
+      t.datetime :published_at
 
       t.timestamps
     end

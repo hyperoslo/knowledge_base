@@ -1,21 +1,15 @@
 require 'spec_helper'
 
 module KnowledgeBase
-  describe CategoriesController do
+  describe ArticlesController do
     routes { KnowledgeBase::Engine.routes }
-
-    describe "GET 'index'" do
-      it "returns http success" do
-        get :index
-        response.should be_success
-      end
-    end
 
     describe "GET 'show'" do
       it "returns http success" do
         category = create :category
+        article  = create :article, category: category
 
-        get :show, id: category.slug
+        get :show, category_id: category.slug, id: article.slug
 
         response.should be_success
       end

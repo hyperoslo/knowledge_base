@@ -1,3 +1,5 @@
 KnowledgeBase::Engine.routes.draw do
-  resources :categories
+  resources :categories, only: [:index, :show] do
+    resources :articles, only: [:show]
+  end
 end

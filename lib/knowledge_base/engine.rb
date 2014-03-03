@@ -1,4 +1,5 @@
 require 'friendly_id'
+require 'publishable'
 
 module KnowledgeBase
   class Engine < ::Rails::Engine

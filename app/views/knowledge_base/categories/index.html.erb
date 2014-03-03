@@ -1,2 +1,11 @@
-<h1>Categories#index</h1>
-<p>Find me in app/views/knowledge_base/categories/index.html.erb</p>
+<h1>Categories</h1>
+
+<div class="categories">
+  <% @categories.each do |category| %>
+  <div class="category">
+    <h2 class="title"><%= link_to category.title, category %></h2>
+
+    <div class="description"><%= simple_format category.description %></div>
+  </div>
+  <% end %>
+</div>
