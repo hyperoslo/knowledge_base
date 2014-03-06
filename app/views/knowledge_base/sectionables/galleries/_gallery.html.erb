@@ -1,0 +1,17 @@
+<h1 class="title"><%= gallery.title %></h1>
+
+<div class="description">
+  <%= simple_format gallery.description %>
+</div>
+
+<div class="images">
+  <% gallery.images.each do |image| %>
+    <div class="image">
+      <%= image_tag image.image %>
+
+      <div class="caption">
+        <%= simple_format image.caption %>
+      </div>
+    </div>
+  <% end %>
+</div>
