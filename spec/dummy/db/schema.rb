@@ -39,6 +39,13 @@ ActiveRecord::Schema.define(version: 20140306162143) do
   add_index "knowledge_base_categories", ["category_id"], name: "index_knowledge_base_categories_on_category_id"
   add_index "knowledge_base_categories", ["slug"], name: "index_knowledge_base_categories_on_slug", unique: true
 
+  create_table "knowledge_base_sectionables_images", force: true do |t|
+    t.text     "caption"
+    t.string   "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "knowledge_base_sectionables_texts", force: true do |t|
     t.string   "heading"
     t.text     "lead"

@@ -7,3 +7,6 @@ article  = KnowledgeBase::Article.create! title: Faker::Lorem.words.join, descri
 
 sectionable = KnowledgeBase::Sectionables::Text.create! heading: Faker::Lorem.words.join, lead: Faker::Lorem.sentence, body: Faker::Lorem.paragraph
 section     = KnowledgeBase::Section.create! sectionable: sectionable, container: article
+
+sectionable = KnowledgeBase::Sectionables::Image.create! caption: Faker::Lorem.sentence, image: File.open('spec/fixtures/parrot.png')
+section     = KnowledgeBase::Section.create! sectionable: sectionable, container: article

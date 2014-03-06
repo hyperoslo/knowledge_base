@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 4.1.0.rc1"
   s.add_dependency "friendly_id", "~> 5.0.0"
   s.add_dependency "publishable", "~> 1.0.1"
+  s.add_dependency "carrierwave", "~> 0.10.0"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec-rails"

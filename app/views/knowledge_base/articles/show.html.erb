@@ -4,6 +4,8 @@
   <%= simple_format @article.description %>
 
   <% @article.sections.each do |section| %>
-    <%= render section.sectionable %>
+    <div class="<%= section.sectionable.class.name.demodulize.downcase %> section">
+      <%= render section.sectionable %>
+    </div>
   <% end %>
 </div>
