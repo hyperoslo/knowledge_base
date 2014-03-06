@@ -1,0 +1,17 @@
+<h1 class="title"><%= list.title %></h1>
+
+<div class="description">
+  <%= simple_format list.description %>
+</div>
+
+<ul class="items">
+  <% list.items.each do |item| %>
+    <li class="item">
+      <h2><%= item.title %></h2>
+
+      <div class="body">
+        <%= simple_format item.body %>
+      </div>
+    </li>
+  <% end %>
+</div>
