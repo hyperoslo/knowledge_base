@@ -4,6 +4,5 @@ module KnowledgeBase
     # key to be on this side and declaring `belongs_to` is the only way to do that.
     belongs_to :sectionable, polymorphic: true
 
-    validates :kind, presence: true
   end
 end
