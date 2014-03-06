@@ -2,4 +2,8 @@
 
 <div class="description">
   <%= simple_format @article.description %>
+
+  <% @article.sections.each do |section| %>
+    <%= render section.sectionable %>
+  <% end %>
 </div>
