@@ -32,7 +32,11 @@ Configure your routes:
 ```ruby
 # config/routes.rb
 
-mount KnowledgeBase::Engine, at: '/knowledge_base'
+Rails.application.routes.draw do
+  [...]
+
+  mount KnowledgeBase::Engine, at: '/knowledge_base'
+end
 ```
 
 ## Usage
