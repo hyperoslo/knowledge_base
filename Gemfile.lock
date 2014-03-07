@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    knowledge_base (0.0.1)
+    knowledge_base (0.0.2)
       carrierwave (~> 0.10.0)
       friendly_id (~> 5.0.0)
       publishable (~> 1.0.1)
