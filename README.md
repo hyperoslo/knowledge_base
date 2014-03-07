@@ -61,7 +61,9 @@ Configure your knowledge base in an initializer:
 
 ```ruby
 KnowledgeBase.configure do |config|
-  config.storage = :file # Storage method for uploaded files. See CarrierWave for details.
+  config.storage = :file                # Storage method for uploaded files. See CarrierWave for details.
+  config.categories_path = 'categories' # The routing path for categories.
+  config.articles_path = 'articles'     # The routing path for articles.
 end
 ```
 

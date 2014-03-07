@@ -1,7 +1,9 @@
 module KnowledgeBase
   class Configuration
     configs = {
-      storage: :file
+      storage: :file,
+      categories_path: 'categories',
+      articles_path: 'articles'
     }
 
     configs.each do |config, default|
