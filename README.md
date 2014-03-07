@@ -35,7 +35,13 @@ It has categories and articles to keep things organized, and each article consis
 Sections can be text, an image, a gallery of images, a video or just about anything you can imagine.
 
 You can make your own sections, too, but we already ship with a whole bunch of them to make your life easier and you
-should look at `app/models/knowledge_base/sectionables/` before you do anything crazy.
+should look at them before you do anything crazy.
+
+Oh, and there's a rake task that you can use to seed your database for styling purposes:
+
+```bash
+$ rake knowledge_base:seed
+```
 
 ## Configuration
 
