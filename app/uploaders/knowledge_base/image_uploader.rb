@@ -9,7 +9,6 @@ module KnowledgeBase
 
     # Choose what kind of storage to use for this uploader:
     storage KnowledgeBase.config.storage
-    # storage :fog
 
     # Override the directory where uploaded files will be stored.
     # This is a sensible default for uploaders that are meant to be mounted:
