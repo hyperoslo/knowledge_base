@@ -30,11 +30,13 @@ Run the migrations:
 
 ## Usage
 
-Knowledge Base ships with a bunch of models that you probably need to build your own. It has categories and articles
-to keep things organized, and each article consists of any number of sections. Sections can be text, an image, a gallery
-of images, a video or just about anything you can imagine. You can make your own sections, too, but we already ship
-with a whole bunch of them to make your life easier and you should look at `app/models/knowledge_base/sectionables/`
-before you do anything crazy.
+Knowledge Base ships with a bunch of models that you probably need to build your own.
+
+It has categories and articles to keep things organized, and each article consists of any number of sections.
+Sections can be text, an image, a gallery of images, a video or just about anything you can imagine.
+
+You can make your own sections, too, but we already ship with a whole bunch of them to make your life easier and you
+should look at `app/models/knowledge_base/sectionables/` before you do anything crazy.
 
 ## Configuration
 
