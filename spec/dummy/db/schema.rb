@@ -17,13 +17,10 @@ ActiveRecord::Schema.define(version: 20140307092719) do
     t.string   "title"
     t.string   "slug"
     t.text     "description"
-    t.integer  "category_id"
     t.datetime "published_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "knowledge_base_articles", ["category_id"], name: "index_knowledge_base_articles_on_category_id"
 
   create_table "knowledge_base_categories", force: true do |t|
     t.string   "title"

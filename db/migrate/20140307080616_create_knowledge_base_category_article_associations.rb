@@ -11,6 +11,6 @@ class CreateKnowledgeBaseCategoryArticleAssociations < ActiveRecord::Migration
     add_index :knowledge_base_category_article_associations, [:category_id], name: 'index_knowledge_base_c_a_association_on_category_id'
     add_index :knowledge_base_category_article_associations, [:article_id], name: 'index_knowledge_base_c_a_association_on_article_id'
 
-    remove_column :knowledge_base_category_article_associations, :category, :references
+    remove_column :knowledge_base_articles, :category_id, :references
   end
 end
