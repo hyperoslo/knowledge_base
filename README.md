@@ -27,6 +27,14 @@ Run the migrations:
 
     rake db:migrate
 
+Configure your routes:
+
+```ruby
+# config/routes.rb
+
+mount KnowledgeBase::Engine, at: '/knowledge_base'
+```
+
 ## Usage
 
 Knowledge Base ships with a bunch of models that you probably need to build your own.
