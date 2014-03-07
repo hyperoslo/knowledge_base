@@ -1,11 +1,17 @@
-<h1 class="title"><%= @article.title %></h1>
+<div class="category">
+  <div class="meta">
+    <h1 class="title"><%= @article.title %></h1>
 
-<div class="description">
-  <%= simple_format @article.description %>
+    <div class="description">
+      <%= simple_format @article.description %>
+    </div>
+  </div>
 
-  <% @article.sections.each do |section| %>
+  <div class="sections">
+    <% @article.sections.each do |section| %>
     <div class="<%= section.sectionable.class.name.demodulize.downcase %> section">
       <%= render section.sectionable %>
     </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
