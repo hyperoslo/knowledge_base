@@ -7,11 +7,11 @@ require "knowledge_base/version"
 Gem::Specification.new do |s|
   s.name        = "knowledge_base"
   s.version     = KnowledgeBase::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of KnowledgeBase."
-  s.description = "TODO: Description of KnowledgeBase."
+  s.authors     = ["Johannes Gorset"]
+  s.email       = ["johannes@hyper.no"]
+  s.homepage    = "http://github.com/hyperoslo/knowledge_Base"
+  s.summary     = "Knowledge Base is a bunch of models for Ruby on Rails that you probably need to build your own"
+  s.description = "Knowledge Base is a bunch of models for Ruby on Rails that you probably need to build your own"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]

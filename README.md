@@ -3,8 +3,7 @@
 [![Code Climate](https://codeclimate.com/github/hyperoslo/knowledge_base.png)](https://codeclimate.com/github/hyperoslo/knowledge_base)
 [![Build Status](https://travis-ci.org/hyperoslo/knowledge_base.png)](https://travis-ci.org/hyperoslo/knowledge_base)
 
-Knowledge Base makes it really easy to, well, make a knowledge base. It has categories, articles and lots of things you can
-put in them.
+Knowledge Base is a bunch of models for Ruby on Rails that you probably need to build your own.
 
 ## Installation
 
