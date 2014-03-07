@@ -11,5 +11,9 @@ module KnowledgeBase
     def config
       @config ||= KnowledgeBase::Configuration.new
     end
+
+    def reset
+      @config = nil
+    end
   end
 end

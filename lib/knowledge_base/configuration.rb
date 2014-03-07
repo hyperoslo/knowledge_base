@@ -1,12 +1,20 @@
 module KnowledgeBase
   class Configuration
-    attr_writer :storage
+    configs = {
+      storage: :file
+    }
 
-    def storage
-      if @storage.nil?
-        :file
-      else
-        @storage
+    configs.each do |config, default|
+      attr_writer config
+
+      define_method config do
+        value = instance_variable_get "@#{config}"
+
+        if value.nil?
+          default
+        else
+          value
+        end
       end
     end
   end

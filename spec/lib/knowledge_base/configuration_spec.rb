@@ -1,14 +1,18 @@
 require 'spec_helper'
 
 describe KnowledgeBase::Configuration do
-  {
-    storage: 'fog'
-  }.each do |key, value|
-    
-    it "can configure #{key}" do
-      subject.send "#{key}=", 'configuration'
+  before do
+    KnowledgeBase.reset
+  end
 
-      expect(subject.send(key)).to eq 'configuration'
+  it 'should be configurable' do
+    subject.storage = :fog
+    expect(subject.storage).to eq :fog
+  end
+
+  describe '#storage' do
+    it 'should default to :file' do
+      expect(subject.storage).to eq :file
     end
   end
 end
