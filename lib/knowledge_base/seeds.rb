@@ -16,7 +16,7 @@ section = KnowledgeBase::Section.create! sectionable: text, container: article, 
 image   = KnowledgeBase::Sectionables::Image.create! caption: Faker::Lorem.sentence, image: fixture('parrot.png')
 section = KnowledgeBase::Section.create! sectionable: image, container: article, position: 2
 
-video   = KnowledgeBase::Sectionables::Video.create! url: 'http://www.youtube.com/watch?v=9zp6NGhOjiU'
+video   = KnowledgeBase::Sectionables::Video.create! url: 'http://www.youtube.com/watch?v=OfVh1v7GGKY'
 section = KnowledgeBase::Section.create! sectionable: video, container: article, position: 3
 
 gallery = KnowledgeBase::Sectionables::Gallery.create! title: Faker::Lorem.sentence, description: Faker::Lorem.sentence
