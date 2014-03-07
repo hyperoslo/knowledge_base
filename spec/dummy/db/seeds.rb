@@ -22,3 +22,7 @@ section = KnowledgeBase::Section.create! sectionable: gallery, container: articl
 list = KnowledgeBase::Sectionables::List.create! title: Faker::Lorem.sentence, description: Faker::Lorem.paragraph
 2.times { list.items.create title: Faker::Lorem.sentence, body: Faker::Lorem.paragraph }
 section = KnowledgeBase::Section.create! sectionable: list, container: article, position: 5
+
+links = KnowledgeBase::Sectionables::Links.create!
+2.times { links.links.create title: Faker::Lorem.word, url: 'http://example.org' }
+section = KnowledgeBase::Section.create! sectionable: links, container: article, position: 6
