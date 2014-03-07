@@ -6,8 +6,9 @@ module KnowledgeBase
 
     describe "GET 'show'" do
       it "returns http success" do
-        category = create :category
-        article  = create :article, category: category
+        category    = create :category
+        article     = create :article
+        association = create :category_article_association, category: category, article: article
 
         get :show, category_id: category.slug, id: article.slug
 

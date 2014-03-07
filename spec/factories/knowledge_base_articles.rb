@@ -5,6 +5,5 @@ FactoryGirl.define do
     title "MyString"
     slug "MyString"
     description "MyText"
-    category nil
   end
 end
