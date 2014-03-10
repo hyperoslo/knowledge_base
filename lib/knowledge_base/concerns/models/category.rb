@@ -14,5 +14,9 @@ module KnowledgeBase::Concerns::Models::Category
 
     scope :root, -> { where parent_id: nil }
     scope :published, -> { where published: true }
+
+    def to_s
+      title
+    end
   end
 end

@@ -11,5 +11,9 @@ module KnowledgeBase::Concerns::Models::Article
     has_many :category_article_associations
     has_many :categories, through: :category_article_associations
     has_many :sections, -> { order 'position ASC' }, as: :container
+
+    def to_s
+      title
+    end
   end
 end
