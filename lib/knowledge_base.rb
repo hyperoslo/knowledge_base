@@ -1,5 +1,6 @@
 require "knowledge_base/engine"
 require "knowledge_base/configuration"
+require "knowledge_base/concerns"
 require "carrierwave"
 
 module KnowledgeBase
