@@ -5,5 +5,9 @@ module KnowledgeBase
     def youtube_id
       url[VIDEO_ID_EXPRESSION, 1]
     end
+
+    def to_s
+      url
+    end
   end
 end
