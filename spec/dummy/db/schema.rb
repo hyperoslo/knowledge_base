@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140318125210) do
+ActiveRecord::Schema.define(version: 20140318210722) do
 
   create_table "knowledge_base_articles", force: true do |t|
     t.string   "title"
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 20140318125210) do
 
   create_table "knowledge_base_sectionables_galleries", force: true do |t|
     t.string   "title"
-    t.string   "description"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
