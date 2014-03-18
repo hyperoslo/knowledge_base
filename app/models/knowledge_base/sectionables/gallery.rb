@@ -1,9 +1,9 @@
-module KnowledgeBase
-  class Sectionables::Gallery < ActiveRecord::Base
+module KnowledgeBase::Sectionables
+  class Gallery < Sectionable
     has_many :images, -> { order 'position DESC' }
 
     def to_s
-      title
+      "#{super}: #{title}"
     end
   end
 end

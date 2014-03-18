@@ -1,5 +1,5 @@
-module KnowledgeBase
-  class Sectionables::Video < ActiveRecord::Base
+module KnowledgeBase::Sectionables
+  class Video < Sectionable
     VIDEO_ID_EXPRESSION = %r{^https?://(?:(?:www|m)\.)?youtube\.com/watch\?v=([^&]+)}
 
     def youtube_id
@@ -7,7 +7,7 @@ module KnowledgeBase
     end
 
     def to_s
-      url
+      "#{super}: #{url}"
     end
   end
 end

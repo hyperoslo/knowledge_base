@@ -1,0 +1,49 @@
+nb:
+  activerecord:
+    models:
+      knowledge_base/category:
+        one: Kategori
+        other: Kategorier
+      knowledge_base/article:
+        one: Artikkel
+        other: Artikler
+      knowledge_base/category_article_association:
+        one: Lenke
+        other: Lenker
+      knowledge_base/section:
+        one: Seksjon
+        other: Seksjoner
+    attributes:
+      knowledge_base/category:
+        title: Tittel
+        slug: Slug
+        description: Beskrivelse
+        category: Kategori
+        category_id: Kategori
+        position: Plassering
+        published_at: Publisert
+        created_at: Opprettet
+        updated_at: Oppdatert
+      knowledge_base/article:
+        title: Tittel
+        slug: slug
+        description: Beskrivelse
+        category_article_assocations: Lenker mellom kategorier og artikler
+        categories: Kategorier
+        sections: Seksjoner
+        published_at: Publisert
+        created_at: Opprettet
+        updated_at: Oppdatert
+      knowledge_base/category_article_association:
+        category: Kategori
+        category_id: Kategori
+        article: Artikkel
+        article_id: Artikkel
+        position: Plassering
+        created_at: Opprettet
+        updated_at: Oppdatert
+      knowledge_base/section:
+        sectionable: Innhold
+        position: Plassering
+        created_at: Opprettet
+        updated_at: Oppdatert

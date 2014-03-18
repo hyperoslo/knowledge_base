@@ -1,9 +1,9 @@
-module KnowledgeBase
-  class Sectionables::Image < ActiveRecord::Base
+module KnowledgeBase::Sectionables
+  class Image < Sectionable
     mount_uploader :image, ImageUploader
 
     def to_s
-      caption
+      "#{super}: #{caption}"
     end
   end
 end

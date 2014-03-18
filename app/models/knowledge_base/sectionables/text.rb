@@ -1,7 +1,7 @@
-module KnowledgeBase
-  class Sectionables::Text < ActiveRecord::Base
+module KnowledgeBase::Sectionables
+  class Text < Sectionable
     def to_s
-      heading
+      "#{super}: #{heading}"
     end
   end
 end
