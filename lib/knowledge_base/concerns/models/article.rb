@@ -13,7 +13,7 @@ module KnowledgeBase::Concerns::Models::Article
     has_many :sections, -> { order 'position ASC' }, as: :container
 
     accepts_nested_attributes_for :category_article_associations
-    accepts_nested_attributes_for :sections
+    accepts_nested_attributes_for :sections, allow_destroy: true
 
     def to_s
       title
