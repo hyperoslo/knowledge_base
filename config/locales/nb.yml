@@ -13,6 +13,33 @@ nb:
       knowledge_base/section:
         one: Seksjon
         other: Seksjoner
+      knowledge_base/sectionables/text:
+        one: Tekst
+        other: Tekster
+      knowledge_base/sectionables/image:
+        one: Bilde
+        other: Bilder
+      knowledge_base/sectionables/gallery:
+        one: Galleri
+        other: Gallerier
+      knowledge_base/sectionables/gallery/image:
+        one: Bilde
+        other: Bilder
+      knowledge_base/sectionables/list:
+        one: Liste
+        other: Lister
+      knowledge_base/sectionables/list/item:
+        one: Punkt
+        other: Punkter
+      knowledge_base/sectionables/links:
+        one: Lenker
+        other: Lenker
+      knowledge_base/sectionables/links/link:
+        one: Lenke
+        other: Lenker
+      knowledge_base/sectionables/video:
+        one: Video
+        other: Videoer
     attributes:
       knowledge_base/category:
         title: Tittel
@@ -46,5 +73,43 @@ nb:
         sectionable: Innhold
         sectionable_type: Innholdstype
         position: Plassering
+        created_at: Opprettet
+        updated_at: Oppdatert
+      knowledge_base/sectionables/text:
+        heading: Overskrift
+        lead: Inngress
+        body: Brødtekst
+        position: Plassering
+        created_at: Opprettet
+        updated_at: Oppdatert
+      knowledge_base/sectionables/image:
+        image: Bilde
+        caption: Bildetekst
+      knowledge_base/sectionables/gallery:
+        title: Tittel
+        description: Beskrivelse
+      knowledge_base/sectionables/gallery/image:
+        caption: Bildetekst
+        image: Bilde
+      knowledge_base/sectionables/list:
+        title: Tittel
+        description: Beskrivelse
+      knowledge_base/sectionables/list/item:
+        title: Tittel
+        body: Brødtekst
+        position: Plassering
+        created_at: Opprettet
+        updated_at: Oppdatert
+      knowledge_base/sectionables/links:
+        created_at: Opprettet
+        updated_at: Oppdatert
+      knowledge_base/sectionables/links/link:
+        title: Tittel
+        url: Addresse
+        position: Plassering
+        created_at: Opprettet
+        updated_at: Oppdatert
+      knowledge_base/sectionables/video:
+        url: Addresse
         created_at: Opprettet
         updated_at: Oppdatert
