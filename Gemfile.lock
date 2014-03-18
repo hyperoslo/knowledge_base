@@ -3,6 +3,7 @@ PATH
   specs:
     knowledge_base (0.1.0)
       carrierwave (~> 0.10.0)
+      faker
       friendly_id (~> 5.0.0)
       publishable (~> 1.0.1)
       rails (~> 4.0)
@@ -122,7 +123,6 @@ PLATFORMS
 
 DEPENDENCIES
   factory_girl_rails
-  faker
   knowledge_base!
   rails (= 4.1.0.rc1)
   rspec-rails
