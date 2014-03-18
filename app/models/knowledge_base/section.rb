@@ -5,5 +5,7 @@ module KnowledgeBase
     belongs_to :sectionable, polymorphic: true
 
     belongs_to :container, polymorphic: true
+
+    validates :sectionable, presence: true
   end
 end
