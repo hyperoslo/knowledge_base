@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140307092719) do
+ActiveRecord::Schema.define(version: 20140318125210) do
 
   create_table "knowledge_base_articles", force: true do |t|
     t.string   "title"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20140307092719) do
     t.string   "slug"
     t.text     "description"
     t.integer  "category_id"
-    t.integer  "position"
+    t.integer  "position",     default: 0
     t.datetime "published_at"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20140307092719) do
   create_table "knowledge_base_category_article_associations", force: true do |t|
     t.integer  "category_id"
     t.integer  "article_id"
-    t.integer  "position"
+    t.integer  "position",    default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 20140307092719) do
   create_table "knowledge_base_sectionables_gallery_images", force: true do |t|
     t.string   "caption"
     t.string   "image"
-    t.integer  "position"
+    t.integer  "position",   default: 0
     t.integer  "gallery_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -80,7 +80,7 @@ ActiveRecord::Schema.define(version: 20140307092719) do
   create_table "knowledge_base_sectionables_links_links", force: true do |t|
     t.string   "title"
     t.string   "url"
-    t.integer  "position"
+    t.integer  "position",   default: 0
     t.integer  "links_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -89,7 +89,7 @@ ActiveRecord::Schema.define(version: 20140307092719) do
   create_table "knowledge_base_sectionables_list_items", force: true do |t|
     t.string   "title"
     t.text     "body"
-    t.integer  "position"
+    t.integer  "position",   default: 0
     t.integer  "list_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -121,7 +121,7 @@ ActiveRecord::Schema.define(version: 20140307092719) do
   create_table "knowledge_base_sections", force: true do |t|
     t.integer  "sectionable_id"
     t.string   "sectionable_type"
-    t.integer  "position"
+    t.integer  "position",         default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "container_id"
