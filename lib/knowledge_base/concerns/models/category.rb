@@ -4,7 +4,7 @@ module KnowledgeBase::Concerns::Models::Category
   included do
     extend FriendlyId
 
-    publishable
+    publishable on: :published_at
 
     friendly_id :title, use: :slugged
 
