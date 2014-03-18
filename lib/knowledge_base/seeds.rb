@@ -3,7 +3,7 @@
 require 'faker'
 
 def fixture file
-  File.open "#{File.expand_path File.dirname(__FILE__)}/fixtures/#{file}"
+  File.open "#{File.expand_path File.dirname(__FILE__)}/../../fixtures/#{file}"
 end
 
 category    = KnowledgeBase::Category.create! title: Faker::Lorem.words.join, description: Faker::Lorem.sentence
