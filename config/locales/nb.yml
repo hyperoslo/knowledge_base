@@ -44,6 +44,7 @@ nb:
         updated_at: Oppdatert
       knowledge_base/section:
         sectionable: Innhold
+        sectionable_type: Innholdstype
         position: Plassering
         created_at: Opprettet
         updated_at: Oppdatert
