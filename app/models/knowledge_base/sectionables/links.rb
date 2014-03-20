@@ -5,7 +5,7 @@ module KnowledgeBase::Sectionables
     accepts_nested_attributes_for :links, allow_destroy: true
 
     def to_s
-      "#{super}: #{links.map(&:title).join(', ')}"
+      "#{super} ##{id}: #{links.map(&:title).join(', ')}"
     end
   end
 end

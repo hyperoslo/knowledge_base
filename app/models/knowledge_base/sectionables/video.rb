@@ -7,7 +7,7 @@ module KnowledgeBase::Sectionables
     end
 
     def to_s
-      "#{super}: #{url}"
+      "#{super} ##{id}: #{url}"
     end
   end
 end

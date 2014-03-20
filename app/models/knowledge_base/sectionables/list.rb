@@ -5,7 +5,7 @@ module KnowledgeBase::Sectionables
     accepts_nested_attributes_for :items, allow_destroy: true
 
     def to_s
-      "#{super}: #{title}"
+      "#{super} ##{id}: #{title}"
     end
   end
 end

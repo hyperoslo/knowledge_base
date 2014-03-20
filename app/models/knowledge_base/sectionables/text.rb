@@ -3,7 +3,7 @@ module KnowledgeBase::Sectionables
     mount_uploader :image, KnowledgeBase::ImageUploader
 
     def to_s
-      "#{super}: #{heading}"
+      "#{super} ##{id}: #{heading}"
     end
   end
 end
