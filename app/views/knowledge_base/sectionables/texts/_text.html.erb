@@ -1,6 +1,8 @@
 <h2 class="heading"><%= text.heading %></h2>
 
-<%= image_tag text.image %>
+<% if text.image %>
+  <%= image_tag text.image %>
+<% end %>
 
 <div class="lead">
   <%= simple_format text.lead %>
