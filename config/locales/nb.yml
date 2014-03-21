@@ -40,76 +40,62 @@ nb:
       knowledge_base/sectionables/video:
         one: Video
         other: Videoer
+
     attributes:
-      knowledge_base/category:
+      common: &common
         title: Tittel
         slug: Slug
         description: Beskrivelse
+        position: Plassering
+        created_at: Opprettet
+        updated_at: Sist oppdatert
+
+      knowledge_base/category:
+        <<: *common
         category: Kategori
         category_id: Kategori
-        position: Plassering
         published_at: Publisert
-        created_at: Opprettet
-        updated_at: Oppdatert
       knowledge_base/article:
-        title: Tittel
-        slug: slug
-        description: Beskrivelse
+        <<: *common
         category_article_assocations: Lenker mellom kategorier og artikler
         categories: Kategorier
         sections: Seksjoner
         published_at: Publisert
-        created_at: Opprettet
-        updated_at: Oppdatert
       knowledge_base/category_article_association:
+        <<: *common
         category: Kategori
         category_id: Kategori
         article: Artikkel
         article_id: Artikkel
-        position: Plassering
-        created_at: Opprettet
-        updated_at: Oppdatert
       knowledge_base/section:
+        <<: *common
         sectionable: Innhold
         sectionable_type: Innholdstype
-        position: Plassering
-        created_at: Opprettet
-        updated_at: Oppdatert
       knowledge_base/sectionables/text:
+        <<: *common
         heading: Overskrift
-        lead: Inngress
+        lead: Ingress
         body: Brødtekst
-        position: Plassering
-        created_at: Opprettet
-        updated_at: Oppdatert
       knowledge_base/sectionables/image:
+        <<: *common
         image: Bilde
         caption: Bildetekst
       knowledge_base/sectionables/gallery:
-        title: Tittel
-        description: Beskrivelse
+        <<: *common
       knowledge_base/sectionables/gallery/image:
+        <<: *common
         caption: Bildetekst
         image: Bilde
       knowledge_base/sectionables/list:
-        title: Tittel
-        description: Beskrivelse
+        <<: *common
       knowledge_base/sectionables/list/item:
-        title: Tittel
+        <<: *common
         body: Brødtekst
-        position: Plassering
-        created_at: Opprettet
-        updated_at: Oppdatert
       knowledge_base/sectionables/links:
-        created_at: Opprettet
-        updated_at: Oppdatert
+        <<: *common
       knowledge_base/sectionables/links/link:
-        title: Tittel
-        url: Addresse
-        position: Plassering
-        created_at: Opprettet
-        updated_at: Oppdatert
+        <<: *common
+        url: Adresse
       knowledge_base/sectionables/video:
-        url: Addresse
-        created_at: Opprettet
-        updated_at: Oppdatert
+        <<: *common
+        url: Adresse
