@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.add_dependency "friendly_id", "~> 5.0.0"
   s.add_dependency "publishable", "~> 1.0.1"
   s.add_dependency "carrierwave", "~> 0.10.0"
+  s.add_dependency "embeddable", "~> 0.0.2"
   s.add_dependency "faker"
   s.add_dependency "rmagick"
 
