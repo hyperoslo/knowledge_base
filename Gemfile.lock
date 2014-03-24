@@ -6,9 +6,9 @@ PATH
       embeddable (~> 0.0.2)
       faker
       friendly_id (~> 5.0.0)
+      mini_magick
       publishable (~> 1.0.1)
       rails (~> 4.0)
-      rmagick
 
 GEM
   remote: https://rubygems.org/
@@ -67,6 +67,8 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
+    mini_magick (3.7.0)
+      subexec (~> 0.2.1)
     minitest (5.3.0)
     multi_json (1.9.0)
     polyglot (0.3.4)
@@ -90,7 +92,6 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.1.1)
-    rmagick (2.13.2)
     rspec-core (2.14.8)
     rspec-expectations (2.14.5)
       diff-lcs (>= 1.1.3, < 2.0)
@@ -113,6 +114,7 @@ GEM
       activesupport (>= 3.0)
       sprockets (~> 2.8)
     sqlite3 (1.3.9)
+    subexec (0.2.3)
     thor (0.18.1)
     thread_safe (0.2.0)
       atomic (>= 1.1.7, < 2)

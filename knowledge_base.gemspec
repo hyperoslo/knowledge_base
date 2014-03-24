@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.add_dependency "carrierwave", "~> 0.10.0"
   s.add_dependency "embeddable", "~> 0.0.2"
   s.add_dependency "faker"
-  s.add_dependency "rmagick"
+  s.add_dependency "mini_magick"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec-rails"
