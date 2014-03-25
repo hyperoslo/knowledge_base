@@ -1,5 +1,9 @@
 <h2 class="title"><%= list.title %></h2>
 
+<% if list.image %>
+  <%= image_tag list.image %>
+<% end %>
+
 <div class="description">
   <%= simple_format list.description %>
 </div>
