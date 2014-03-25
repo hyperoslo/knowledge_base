@@ -1,6 +1,6 @@
 module KnowledgeBase::Sectionables
   class Gallery < Sectionable
-    has_many :images, -> { order 'position DESC' },
+    has_many :images, -> { order position: :asc },
       dependent: :destroy
 
     has_many :sections, dependent: :destroy

@@ -2,6 +2,7 @@ require "knowledge_base/engine"
 require "knowledge_base/configuration"
 require "knowledge_base/concerns"
 require "carrierwave"
+require "embeddable"
 
 module KnowledgeBase
   class << self

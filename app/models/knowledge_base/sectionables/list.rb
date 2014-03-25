@@ -1,5 +1,7 @@
 module KnowledgeBase::Sectionables
   class List < Sectionable
+    mount_uploader :image, KnowledgeBase::ImageUploader
+
     has_many :items, -> { order 'position ASC' }
 
     has_many :sections, dependent: :destroy
