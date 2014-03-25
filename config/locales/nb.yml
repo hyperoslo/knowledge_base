@@ -76,6 +76,7 @@ nb:
         heading: Overskrift
         lead: Ingress
         body: Brødtekst
+        remove_image: Fjern bilde
       knowledge_base/sectionables/image:
         <<: *common
         image: Bilde
@@ -88,6 +89,7 @@ nb:
         image: Bilde
       knowledge_base/sectionables/list:
         <<: *common
+        remove_image: Fjern bilde
       knowledge_base/sectionables/list/item:
         <<: *common
         body: Brødtekst
