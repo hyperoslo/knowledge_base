@@ -68,7 +68,7 @@ Carrierwave.configure do |config|
 end
 ```
 
-### Administration
+## Administration
 
 Knowledge Base comes with configuration for ActiveAdmin:
 
