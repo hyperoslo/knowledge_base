@@ -81,10 +81,6 @@ ActiveAdmin.register KnowledgeBase::Article do
       end
     end
 
-    f.inputs do
-      f.input :tags, as: :check_boxes
-    end
-
     f.actions
   end
 
