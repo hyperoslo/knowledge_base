@@ -68,6 +68,14 @@ Carrierwave.configure do |config|
 end
 ```
 
+### Administration
+
+Knowledge Base comes with configuration for ActiveAdmin:
+
+```bash
+$ rails generate knowledge_base:active_admin
+```
+
 ## Contributing
 
 1. Fork it
