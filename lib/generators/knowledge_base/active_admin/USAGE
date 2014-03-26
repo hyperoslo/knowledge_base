@@ -1,0 +1,8 @@
+Description:
+    Create ActiveAdmin configuration
+
+Example:
+    rails generate knowledge_base:active_admin
+
+    This will create:
+        app/admin/knowledge_base
