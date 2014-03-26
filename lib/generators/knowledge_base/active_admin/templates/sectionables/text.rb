@@ -9,7 +9,7 @@ ActiveAdmin.register KnowledgeBase::Sectionables::Text do
 
       image_hint = f.object.new_record? ? nil : f.template.image_tag(f.object.image.medium)
       f.input :image, hint: image_hint
-      f.input :remove_image: as: :boolean
+      f.input :remove_image, as: :boolean
     end
 
     f.actions
