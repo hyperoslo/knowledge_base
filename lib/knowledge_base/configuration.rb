@@ -1,7 +1,6 @@
 module KnowledgeBase
   class Configuration
     configs = {
-      storage: :file,
       categories_path: 'categories',
       articles_path: 'articles'
     }

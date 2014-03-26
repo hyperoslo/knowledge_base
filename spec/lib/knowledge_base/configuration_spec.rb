@@ -6,14 +6,8 @@ describe KnowledgeBase::Configuration do
   end
 
   it 'should be configurable' do
-    subject.storage = :fog
-    expect(subject.storage).to eq :fog
-  end
-
-  describe '#storage' do
-    it 'should default to :file' do
-      expect(subject.storage).to eq :file
-    end
+    subject.categories_path = :fog
+    expect(subject.categories_path).to eq :fog
   end
 
   describe '#categories_path' do

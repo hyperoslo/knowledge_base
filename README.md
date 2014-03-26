@@ -57,13 +57,14 @@ $ rake knowledge_base:seed
 
 ## Configuration
 
-Configure your knowledge base in an initializer:
+If you don't want to save images to disk, you will want to configure CarrierWave:
 
 ```ruby
-KnowledgeBase.configure do |config|
-  config.storage = :file                # Storage method for uploaded files. See CarrierWave for details.
-  config.categories_path = 'categories' # The routing path for categories.
-  config.articles_path = 'articles'     # The routing path for articles.
+# config/initializers/carrierwave.rb
+Carrierwave.configure do |config|
+  storage :fog
+
+  ...
 end
 ```
 
