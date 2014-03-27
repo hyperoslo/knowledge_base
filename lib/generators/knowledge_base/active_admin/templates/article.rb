@@ -48,7 +48,7 @@ ActiveAdmin.register KnowledgeBase::Article do
     end
   end
 
-  SECTIONABLES = [
+  sectionables = [
     'KnowledgeBase::Sectionables::Gallery',
     'KnowledgeBase::Sectionables::Image',
     'KnowledgeBase::Sectionables::Links',
@@ -66,11 +66,11 @@ ActiveAdmin.register KnowledgeBase::Article do
       f.has_many :sections, sortable: :position do |section|
 
         section.input :sectionable_type, input_html: { parent: true },
-          collection: SECTIONABLES.map { |sectionable|
+          collection: sectionables.map { |sectionable|
           [sectionable.constantize.model_name.human, sectionable]
         }
 
-        SECTIONABLES.each do |sectionable|
+        sectionables.each do |sectionable|
           section.input :sectionable, wrapper_html: { class: 'hide', child: true, model: sectionable },
             collection: sectionable.constantize.all.map { |sectionable|
             [sectionable.to_s, sectionable.id]
