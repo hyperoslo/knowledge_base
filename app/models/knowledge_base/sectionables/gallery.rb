@@ -3,7 +3,7 @@ module KnowledgeBase::Sectionables
     has_many :images, -> { order position: :asc },
       dependent: :destroy
 
-    has_many :sections, dependent: :destroy
+    has_many :sections, as: :sectionable, dependent: :destroy
 
     accepts_nested_attributes_for :images, allow_destroy: true
 
