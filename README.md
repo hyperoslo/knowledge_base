@@ -1,7 +1,7 @@
 # Knowledge Base
 
-[![Code Climate](https://codeclimate.com/github/hyperoslo/knowledge_base.png)](https://codeclimate.com/github/hyperoslo/knowledge_base)
-[![Build Status](https://travis-ci.org/hyperoslo/knowledge_base.png)](https://travis-ci.org/hyperoslo/knowledge_base)
+[![Code Climate](https://img.shields.io/codeclimate/github/hyperoslo/knowledge_base.svg)](https://codeclimate.com/github/hyperoslo/knowledge_base)
+[![Build Status](https://img.shields.io/travis/hyperoslo/knowledge_base.svg)](https://travis-ci.org/hyperoslo/knowledge_base)
 
 Knowledge Base is a bunch of models for Ruby on Rails that you probably need to build your own.
 
