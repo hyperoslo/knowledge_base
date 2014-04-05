@@ -13,6 +13,9 @@ nb:
       knowledge_base/section:
         one: Seksjon
         other: Seksjoner
+      knowledge_base/sectionables/attachment:
+        one: Vedlegg
+        other: Vedlegg
       knowledge_base/sectionables/text:
         one: Tekst
         other: Tekster
@@ -71,6 +74,10 @@ nb:
         <<: *common
         sectionable: Innhold
         sectionable_type: Innholdstype
+      knowledge_base/sectionables/attachment:
+        <<: *common
+        title: Tittel
+        file: File
       knowledge_base/sectionables/text:
         <<: *common
         heading: Overskrift

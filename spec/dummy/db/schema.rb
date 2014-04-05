@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140325083548) do
+ActiveRecord::Schema.define(version: 20140404234850) do
 
   create_table "knowledge_base_articles", force: true do |t|
     t.string   "title"
@@ -46,6 +46,11 @@ ActiveRecord::Schema.define(version: 20140325083548) do
 
   add_index "knowledge_base_category_article_associations", ["article_id"], name: "index_knowledge_base_c_a_association_on_article_id"
   add_index "knowledge_base_category_article_associations", ["category_id"], name: "index_knowledge_base_c_a_association_on_category_id"
+
+  create_table "knowledge_base_sectionables_attachments", force: true do |t|
+    t.string "title"
+    t.string "file"
+  end
 
   create_table "knowledge_base_sectionables_galleries", force: true do |t|
     t.string   "title"
