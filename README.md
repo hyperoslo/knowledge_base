@@ -22,7 +22,7 @@ Or install it yourself as:
 Install the migrations:
 
     rake knowledge_base:install:migrations
-    
+
 Run the migrations:
 
     rake db:migrate
