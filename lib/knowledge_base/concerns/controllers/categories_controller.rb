@@ -4,11 +4,11 @@ module KnowledgeBase
 
     included do
       def index
-        @categories = Category.all
+        @categories = Category.published
       end
 
       def show
-        @category = Category.friendly.find params[:id]
+        @category = Category.published.find params[:id]
       end
     end
   end

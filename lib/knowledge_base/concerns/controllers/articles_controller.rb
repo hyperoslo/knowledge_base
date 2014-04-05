@@ -4,7 +4,7 @@ module KnowledgeBase
 
     included do
       def show
-        @article = Article.friendly.find params[:id]
+        @article = Article.published.friendly.find params[:id]
       end
     end
   end
