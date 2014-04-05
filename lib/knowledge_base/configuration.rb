@@ -1,22 +1,10 @@
 module KnowledgeBase
   class Configuration
-    configs = {
-      categories_path: 'categories',
-      articles_path: 'articles'
-    }
+    attr_accessor :categories_path, :articles_path
 
-    configs.each do |config, default|
-      attr_writer config
-
-      define_method config do
-        value = instance_variable_get "@#{config}"
-
-        if value.nil?
-          default
-        else
-          value
-        end
-      end
+    def initialize
+      @categories_path = 'categories'
+      @articles_path   = 'articles'
     end
   end
 end
