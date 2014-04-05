@@ -15,7 +15,6 @@ module KnowledgeBase::Concerns::Models::Category
     accepts_nested_attributes_for :category_article_associations, allow_destroy: true
 
     scope :root, -> { where parent_id: nil }
-    scope :published, -> { where published: true }
 
     def to_s
       title
