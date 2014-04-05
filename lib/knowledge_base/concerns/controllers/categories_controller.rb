@@ -8,7 +8,7 @@ module KnowledgeBase
       end
 
       def show
-        @category = Category.published.find params[:id]
+        @category = Category.published.friendly.find params[:id]
       end
     end
   end
