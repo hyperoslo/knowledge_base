@@ -1,10 +1,10 @@
-# Read about factories at https://github.com/thoughtbot/factory_girl
-
 FactoryGirl.define do
   factory :knowledge_base_category, aliases: [:category], class: 'KnowledgeBase::Category' do
     title "MyString"
+    slug "mystring"
     description "MyText"
-    category nil
     sequence(:position)
+
+    trait(:published) { published_at 1.day.ago }
   end
 end

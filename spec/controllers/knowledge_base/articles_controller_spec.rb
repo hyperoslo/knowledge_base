@@ -6,7 +6,7 @@ module KnowledgeBase
 
     describe "GET 'show'" do
       it "returns http success" do
-        article = create :article
+        article = create :article, :published
 
         get :show, id: article.slug
 
