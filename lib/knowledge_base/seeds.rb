@@ -30,3 +30,6 @@ section = KnowledgeBase::Section.create! sectionable: list, container: article, 
 links = KnowledgeBase::Sectionables::Links.create!
 2.times { links.links.create title: Faker::Lorem.word, url: 'http://example.org' }
 section = KnowledgeBase::Section.create! sectionable: links, container: article, position: 6
+
+attachment = KnowledgeBase::Sectionables::Attachment.create! title: Faker::Lorem.word, file: fixture('sample.pdf')
+section    = KnowledgeBase::Section.create! sectionable: attachment, container: article, position: 7
