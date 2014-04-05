@@ -13,7 +13,7 @@ module KnowledgeBase
 
     describe "GET 'show'" do
       it "returns http success" do
-        category = create :category
+        category = create :category, :published
 
         get :show, id: category.slug
 
