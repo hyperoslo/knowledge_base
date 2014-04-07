@@ -6,7 +6,7 @@ def fixture file
   File.open "#{File.expand_path File.dirname(__FILE__)}/../../fixtures/#{file}"
 end
 
-category    = KnowledgeBase::Category.create! title: Faker::Lorem.words.join, description: Faker::Lorem.sentence
+category    = KnowledgeBase::Category.create! title: Faker::Lorem.words.join, description: Faker::Lorem.sentence, published_at: Time.now
 article     = KnowledgeBase::Article.create! title: Faker::Lorem.words.join, description: Faker::Lorem.sentence, published_at: Time.now
 association = KnowledgeBase::CategoryArticleAssociation.create! category: category, article: article
 
