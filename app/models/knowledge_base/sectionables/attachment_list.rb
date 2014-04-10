@@ -1,5 +1,5 @@
-module KnowledgeBase
-  class Sectionables::AttachmentList < ActiveRecord::Base
+module KnowledgeBase::Sectionables
+  class AttachmentList < Sectionable
     has_many :sections, as: :sectionable, dependent: :destroy
 
     has_many :attachments, dependent: :destroy
