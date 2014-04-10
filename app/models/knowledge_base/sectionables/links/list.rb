@@ -1,5 +1,5 @@
 module KnowledgeBase::Sectionables::Links
-  class List < Sectionable
+  class List < ::KnowledgeBase::Sectionables::Sectionable
     has_many :links, dependent: :destroy, foreign_key: :links_id
 
     has_many :sections, as: :sectionable, dependent: :destroy

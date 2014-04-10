@@ -1,5 +1,5 @@
 module KnowledgeBase::Sectionables::Attachments
-  class List < Sectionable
+  class List < ::KnowledgeBase::Sectionables::Sectionable
     has_many :sections, as: :sectionable, dependent: :destroy
 
     has_many :attachments, dependent: :destroy, foreign_key: :attachment_list_id
