@@ -37,9 +37,9 @@ nb:
       knowledge_base/sectionables/list/item:
         one: Punkt
         other: Punkter
-      knowledge_base/sectionables/links:
-        one: Lenker
-        other: Lenker
+      knowledge_base/sectionables/links/list:
+        one: Lenkeliste
+        other: Lenkeliste
       knowledge_base/sectionables/links/link:
         one: Lenke
         other: Lenker
@@ -108,7 +108,7 @@ nb:
       knowledge_base/sectionables/list/item:
         <<: *common
         body: Brødtekst
-      knowledge_base/sectionables/links:
+      knowledge_base/sectionables/links/list:
         <<: *common
       knowledge_base/sectionables/links/link:
         <<: *common
