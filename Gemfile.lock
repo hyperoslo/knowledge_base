@@ -47,6 +47,7 @@ GEM
       activesupport (>= 3.2.0)
       json (>= 1.7)
       mime-types (>= 1.16)
+    coderay (1.1.0)
     diff-lcs (1.2.5)
     embeddable (0.0.2)
       activesupport (~> 4.0)
@@ -61,17 +62,28 @@ GEM
     friendly_id (5.0.3)
       activerecord (>= 4.0.0)
     hike (1.2.3)
+    hirb (0.7.1)
+    hirb-unicode (0.0.5)
+      hirb (~> 0.5)
+      unicode-display_width (~> 0.1.1)
     i18n (0.6.9)
     json (1.8.1)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    method_source (0.8.2)
     mime-types (1.25.1)
     mini_magick (3.7.0)
       subexec (~> 0.2.1)
     minitest (5.3.1)
     multi_json (1.9.2)
     polyglot (0.3.4)
+    pry (0.9.12.6)
+      coderay (~> 1.0)
+      method_source (~> 0.8)
+      slop (~> 3.4)
+    pry-rails (0.3.2)
+      pry (>= 0.9.10)
     publishable (1.0.3)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -104,6 +116,7 @@ GEM
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
+    slop (3.5.0)
     sprockets (2.12.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -124,13 +137,16 @@ GEM
       polyglot (>= 0.3.1)
     tzinfo (1.1.0)
       thread_safe (~> 0.1)
+    unicode-display_width (0.1.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   factory_girl_rails
+  hirb-unicode
   knowledge_base!
+  pry-rails
   rails (= 4.1.0.rc1)
   rspec-rails
   sqlite3
