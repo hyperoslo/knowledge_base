@@ -16,6 +16,9 @@ nb:
       knowledge_base/sectionables/attachment:
         one: Vedlegg
         other: Vedlegg
+      knowledge_base/sectionables/attachment_list:
+        one: Vedleggsliste
+        other: Vedleggslister
       knowledge_base/sectionables/text:
         one: Tekst
         other: Tekster
@@ -76,6 +79,11 @@ nb:
         sectionable_type: Innholdstype
       knowledge_base/sectionables/attachment:
         <<: *common
+        title: Tittel
+        file: File
+      knowledge_base/sectionables/attachment_list:
+        <<: *common
+        attachments: Vedlegg
         title: Tittel
         file: File
       knowledge_base/sectionables/text:
