@@ -1,3 +1,19 @@
+# This is mostly how the attachments looked at the time of the migration. They
+# have later changed names, which would cause errors when running this
+# migration. Hopefully, this is enough to run this through properly.
+module KnowledgeBase::Sectionables
+  class Attachment < Sectionable
+    belongs_to :attachment_list
+  end
+
+  class AttachmentList < Sectionable
+    has_many :sections, as: :sectionable, dependent: :destroy
+
+    has_many :attachments, dependent: :destroy
+    accepts_nested_attributes_for :attachments, allow_destroy: true
+  end
+end
+
 class MigrateAttachmentsOverToLists < ActiveRecord::Migration
   def up
     KnowledgeBase::Sectionables::Attachment.all.each do |attachment|
