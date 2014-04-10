@@ -39,7 +39,7 @@ nb:
         other: Punkter
       knowledge_base/sectionables/links/list:
         one: Lenkeliste
-        other: Lenkeliste
+        other: Lenkelister
       knowledge_base/sectionables/links/link:
         one: Lenke
         other: Lenker
