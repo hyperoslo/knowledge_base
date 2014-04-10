@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140410185528) do
+ActiveRecord::Schema.define(version: 20140410205056) do
 
   create_table "knowledge_base_articles", force: true do |t|
     t.string   "title"
@@ -47,18 +47,18 @@ ActiveRecord::Schema.define(version: 20140410185528) do
   add_index "knowledge_base_category_article_associations", ["article_id"], name: "index_knowledge_base_c_a_association_on_article_id"
   add_index "knowledge_base_category_article_associations", ["category_id"], name: "index_knowledge_base_c_a_association_on_category_id"
 
-  create_table "knowledge_base_sectionables_attachment_lists", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "knowledge_base_sectionables_attachments", force: true do |t|
+  create_table "knowledge_base_sectionables_attachments_attachments", force: true do |t|
     t.string  "title"
     t.string  "file"
     t.integer "attachment_list_id"
   end
 
-  add_index "knowledge_base_sectionables_attachments", ["attachment_list_id"], name: "index_knowledge_base_attachments_on_attachment_list_id"
+  add_index "knowledge_base_sectionables_attachments_attachments", ["attachment_list_id"], name: "index_knowledge_base_attachments_on_attachment_list_id"
+
+  create_table "knowledge_base_sectionables_attachments_lists", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "knowledge_base_sectionables_galleries", force: true do |t|
     t.string   "title"
