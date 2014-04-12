@@ -37,7 +37,7 @@ end
 
 ## Usage
 
-At it's core, Knowledge Base is categories and articles. Its categories can have many articles,
+At its core, Knowledge Base is categories and articles. Its categories can have many articles,
 and each article can be in many categories.
 
 Articles consist of sections. Sections can be text, images, links, attachments and just about
