@@ -5,6 +5,9 @@ require 'rspec/rails'
 require 'rspec/autorun'
 require 'factory_girl_rails'
 
+require 'coveralls'
+Coveralls.wear!
+
 Rails.backtrace_cleaner.remove_silencers!
 
 # Load support files
