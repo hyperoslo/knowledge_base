@@ -14,21 +14,14 @@ Add this line to your application's Gemfile:
 
     gem 'knowledge_base'
 
-And then execute:
+... and then execute:
 
     $ bundle
 
-Or install it yourself as:
+Install and run the migrations:
 
-    $ gem install knowledge_base
-
-Install the migrations:
-
-    rake knowledge_base:install:migrations
-
-Run the migrations:
-
-    rake db:migrate
+    $ rake knowledge_base:install:migrations
+    $ rake db:migrate
 
 Configure your routes:
 
@@ -44,36 +37,49 @@ end
 
 ## Usage
 
-Knowledge Base ships with a bunch of models that you probably need to build your own.
+At it's core, Knowledge Base is categories and articles. Its categories can have many articles,
+and each article can be in many categories.
 
-It has categories and articles to keep things organized, and each article consists of any number of sections.
-Sections can be text, an image, a gallery of images, a video or just about anything you can imagine.
+Articles consist of sections. Sections can be text, images, links, attachments and just about
+anything else you can imagine. Knowledge Base ships with over a dozen kinds of sections already,
+and you can check them out in `app/models/knowledge_base/sectionables/`.
 
-You can make your own sections, too, but we already ship with a whole bunch of them to make your life easier and you
-should look at them before you do anything crazy.
+### Seeds
 
-Oh, and there's a rake task that you can use to seed your database for styling purposes:
+Development seeds are a nice way to populate your database with dummy content for styling
+and presentation purposes. You seed your database with categories and articles with a rake task:
 
 ```bash
 $ rake knowledge_base:seed
 ```
 
+... or include them in your own development seeds:
+
+```ruby
+# db/seeds/development.rb
+
+require 'knowledge_base/seeds'
+```
+
 ## Configuration
 
-If you don't want to save images to disk, you will want to configure CarrierWave:
+### CarrierWave
+
+Some sections have images or files in them, and Knowledge Base uses [CarrierWave](https://github.com/carrierwaveuploader/carrierwave)
+to upload them. It defaults to saving images to disk, but if you'd rather save them to the cloud you'll
+have to configure it:
 
 ```ruby
 # config/initializers/carrierwave.rb
-Carrierwave.configure do |config|
+CarrierWave.configure do |config|
   storage :fog
-
-  ...
 end
 ```
 
-## Administration
+### ActiveAdmin
 
-Knowledge Base comes with configuration for ActiveAdmin:
+Knowledge Base ships with pretty good configuration for [ActiveAdmin](activeadmin.info), and you
+should probably install it instead of writing your own:
 
 ```bash
 $ rails generate knowledge_base:active_admin
@@ -90,8 +96,7 @@ $ rails generate knowledge_base:active_admin
 ## Credits
 
 Hyper made this. We're a digital communications agency with a passion for good code,
-and if you're using this library we probably want to hire you.
-
+and if you're using Knowledge Base we probably want to hire you.
 
 ## License
 
