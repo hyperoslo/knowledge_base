@@ -27,7 +27,6 @@ Configure your routes:
 
 ```ruby
 # config/routes.rb
-
 Rails.application.routes.draw do
   [...]
 
@@ -59,7 +58,6 @@ $ rake knowledge_base:seed
 
 ```ruby
 # db/seeds/development.rb
-
 require 'knowledge_base/seeds'
 ```
 
