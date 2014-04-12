@@ -35,6 +35,8 @@ Rails.application.routes.draw do
 end
 ```
 
+That's it, you're done!
+
 ## Usage
 
 At its core, Knowledge Base is categories and articles. Its categories can have many articles,
