@@ -1,0 +1,7 @@
+<section class="attachment">
+  <% list.attachments.each do |attachment| %>
+    <%= link_to attachment.title,
+      attachment.file.to_s,
+      download: File.basename(attachment.file.to_s) %>
+  <% end %>
+</section>

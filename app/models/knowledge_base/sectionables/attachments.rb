@@ -1,7 +1,7 @@
 module KnowledgeBase::Sectionables
-  module Links
+  module Attachments
     def self.table_name_prefix
-      'knowledge_base_sectionables_links_'
+      "knowledge_base_sectionables_attachments_"
     end
   end
 end

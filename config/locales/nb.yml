@@ -13,9 +13,12 @@ nb:
       knowledge_base/section:
         one: Seksjon
         other: Seksjoner
-      knowledge_base/sectionables/attachment:
+      knowledge_base/sectionables/attachments/attachment:
         one: Vedlegg
         other: Vedlegg
+      knowledge_base/sectionables/attachments/list:
+        one: Vedleggsliste
+        other: Vedleggslister
       knowledge_base/sectionables/text:
         one: Tekst
         other: Tekster
@@ -34,9 +37,9 @@ nb:
       knowledge_base/sectionables/list/item:
         one: Punkt
         other: Punkter
-      knowledge_base/sectionables/links:
-        one: Lenker
-        other: Lenker
+      knowledge_base/sectionables/links/list:
+        one: Lenkeliste
+        other: Lenkelister
       knowledge_base/sectionables/links/link:
         one: Lenke
         other: Lenker
@@ -74,8 +77,13 @@ nb:
         <<: *common
         sectionable: Innhold
         sectionable_type: Innholdstype
-      knowledge_base/sectionables/attachment:
+      knowledge_base/sectionables/attachments/attachment:
         <<: *common
+        title: Tittel
+        file: File
+      knowledge_base/sectionables/attachments/list:
+        <<: *common
+        attachments: Vedlegg
         title: Tittel
         file: File
       knowledge_base/sectionables/text:
@@ -100,7 +108,7 @@ nb:
       knowledge_base/sectionables/list/item:
         <<: *common
         body: Brødtekst
-      knowledge_base/sectionables/links:
+      knowledge_base/sectionables/links/list:
         <<: *common
       knowledge_base/sectionables/links/link:
         <<: *common

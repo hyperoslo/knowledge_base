@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140404234850) do
+ActiveRecord::Schema.define(version: 20140410231433) do
 
   create_table "knowledge_base_articles", force: true do |t|
     t.string   "title"
@@ -47,9 +47,17 @@ ActiveRecord::Schema.define(version: 20140404234850) do
   add_index "knowledge_base_category_article_associations", ["article_id"], name: "index_knowledge_base_c_a_association_on_article_id"
   add_index "knowledge_base_category_article_associations", ["category_id"], name: "index_knowledge_base_c_a_association_on_category_id"
 
-  create_table "knowledge_base_sectionables_attachments", force: true do |t|
-    t.string "title"
-    t.string "file"
+  create_table "knowledge_base_sectionables_attachments_attachments", force: true do |t|
+    t.string  "title"
+    t.string  "file"
+    t.integer "attachment_list_id"
+  end
+
+  add_index "knowledge_base_sectionables_attachments_attachments", ["attachment_list_id"], name: "index_knowledge_base_attachments_on_attachment_list_id"
+
+  create_table "knowledge_base_sectionables_attachments_lists", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "knowledge_base_sectionables_galleries", force: true do |t|
@@ -77,16 +85,16 @@ ActiveRecord::Schema.define(version: 20140404234850) do
     t.datetime "updated_at"
   end
 
-  create_table "knowledge_base_sectionables_links", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "knowledge_base_sectionables_links_links", force: true do |t|
     t.string   "title"
     t.string   "url"
     t.integer  "position",   default: 0
     t.integer  "links_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "knowledge_base_sectionables_links_lists", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
