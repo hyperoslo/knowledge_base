@@ -1,6 +1,6 @@
 module KnowledgeBase::Sectionables
   class List < Sectionable
-    mount_uploader :image, KnowledgeBase::ImageUploader
+    mount_uploader :image, KnowledgeBase.config.image_uploader
 
     has_many :items, -> { order 'position ASC' }
 
