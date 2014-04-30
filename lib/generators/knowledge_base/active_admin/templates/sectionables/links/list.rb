@@ -1,4 +1,4 @@
-ActiveAdmin.register KnowledgeBase::Sectionables::Links do
+ActiveAdmin.register KnowledgeBase::Sectionables::Links::List do
   menu parent: I18n.t('activerecord.models.knowledge_base/section/kind.other')
 
   index do
