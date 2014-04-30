@@ -1,5 +1,13 @@
 <nav class="links">
   <% list.links.each do |link| %>
-    <%= link_to link.title, link.url %>
+    <div class="link">
+      <%= link_to link.title, link.url %>
+    </div>
+
+    <% if link.description.present? %>
+      <div class="description">
+        <%= simple_format link.description %>
+      </div>
+    <% end %>
   <% end %>
 </nav>

@@ -1,7 +1,14 @@
 <section class="attachment">
   <% list.attachments.each do |attachment| %>
-    <%= link_to attachment.title,
+    <div class="link"><%= link_to attachment.title,
       attachment.file.to_s,
       download: File.basename(attachment.file.to_s) %>
+    </div>
+
+    <% if attachment.description.present? %>
+      <div class="description">
+        <%= simple_format attachment.description %>
+      </div>
+    <% end %>
   <% end %>
 </section>

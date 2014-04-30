@@ -13,6 +13,7 @@ ActiveAdmin.register KnowledgeBase::Sectionables::Links do
   form do |f|
     f.has_many :links, sortable: :position do |f|
       f.input :title
+      f.input :description
       f.input :url
     end
 
