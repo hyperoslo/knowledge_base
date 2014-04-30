@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140410231433) do
+ActiveRecord::Schema.define(version: 20140430112633) do
 
   create_table "knowledge_base_articles", force: true do |t|
     t.string   "title"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 20140410231433) do
     t.string  "title"
     t.string  "file"
     t.integer "attachment_list_id"
+    t.text    "description"
   end
 
   add_index "knowledge_base_sectionables_attachments_attachments", ["attachment_list_id"], name: "index_knowledge_base_attachments_on_attachment_list_id"
@@ -92,6 +93,7 @@ ActiveRecord::Schema.define(version: 20140410231433) do
     t.integer  "links_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "description"
   end
 
   create_table "knowledge_base_sectionables_links_lists", force: true do |t|
