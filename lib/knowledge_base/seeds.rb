@@ -27,9 +27,10 @@ list = KnowledgeBase::Sectionables::List.create! title: Faker::Lorem.sentence, d
 2.times { list.items.create title: Faker::Lorem.sentence, body: Faker::Lorem.paragraph }
 section = KnowledgeBase::Section.create! sectionable: list, container: article, position: 5
 
-links = KnowledgeBase::Sectionables::Links.create!
+links = KnowledgeBase::Sectionables::Links::List.create!
 2.times { links.links.create title: Faker::Lorem.word, url: 'http://example.org' }
 section = KnowledgeBase::Section.create! sectionable: links, container: article, position: 6
 
-attachment = KnowledgeBase::Sectionables::Attachment.create! title: Faker::Lorem.word, file: fixture('sample.pdf')
-section    = KnowledgeBase::Section.create! sectionable: attachment, container: article, position: 7
+attachments = KnowledgeBase::Sectionables::Attachments::List.create!
+2.times { attachments.attachments.create! title: Faker::Lorem.word, file: fixture('sample.pdf') }
+section = KnowledgeBase::Section.create! sectionable: attachments, container: article, position: 7
