@@ -1,3 +1,5 @@
+require 'thor'
+
 begin
   require 'bundler/setup'
 rescue LoadError
