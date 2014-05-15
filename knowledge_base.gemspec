@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
   s.add_dependency "embeddable", "~> 0.0.2"
   s.add_dependency "faker"
   s.add_dependency "mini_magick"
+  s.add_dependency "ransack"
 
   s.add_development_dependency "pry-rails"
   s.add_development_dependency "guard-rspec"
