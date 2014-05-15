@@ -3,6 +3,7 @@ require "knowledge_base/configuration"
 require "knowledge_base/concerns"
 require "carrierwave"
 require "embeddable"
+require "ransack"
 
 module KnowledgeBase
   class << self

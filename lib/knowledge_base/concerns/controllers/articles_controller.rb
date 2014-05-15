@@ -5,8 +5,27 @@ module KnowledgeBase
     included do
       before_action :set_category
 
+      def index
+        if @category
+          @articles = @category.articles
+        else
+          @articles = Article.all
+        end
+
+        @articles = @articles.published
+
+        @search   = @articles.search params[:q]
+        @articles = @search.result.includes(:sections)
+      end
+
       def show
-        @article = Article.published.friendly.find params[:id]
+        if @category
+          @article = @category.articles
+        else
+          @article = Article.all
+        end
+
+        @article = @article.published.friendly.find params[:id]
       end
 
       private

@@ -1,0 +1,11 @@
+<%= render "search" %>
+
+<div class="articles">
+  <% @articles.each do |article| %>
+  <div class="article">
+    <h2 class="title"><%= link_to article.title, article_path(article) %></h2>
+
+    <div class="description"><%= simple_format article.description %></div>
+  </div>
+  <% end %>
+</div>
