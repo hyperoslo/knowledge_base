@@ -13,7 +13,7 @@ module KnowledgeBase
         articles = assigns :articles
 
         expect(response).to be_success
-        expect(articles.count).to eq 0
+        expect(articles.count).to eq 3
       end
     end
 
