@@ -13,6 +13,9 @@ en:
       knowledge_base/section:
         one: Section
         other: Sections
+      knowledge_base/sectionable:
+        one: Sectionable
+        other: Sectionables
       knowledge_base/sectionables/attachments/attachment:
         one: Attachment
         other: Attachments
