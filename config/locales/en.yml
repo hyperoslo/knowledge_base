@@ -1,0 +1,121 @@
+en:
+  activerecord:
+    models:
+      knowledge_base/category:
+        one: Category
+        other: Categories
+      knowledge_base/article:
+        one: Article
+        other: Articles
+      knowledge_base/category_article_association:
+        one: Link
+        other: Links
+      knowledge_base/section:
+        one: Section
+        other: Sections
+      knowledge_base/sectionable:
+        one: Sectionable
+        other: Sectionables
+      knowledge_base/sectionables/attachments/attachment:
+        one: Attachment
+        other: Attachments
+      knowledge_base/sectionables/attachments/list:
+        one: Attachment list
+        other: Attachment lists
+      knowledge_base/sectionables/text:
+        one: Text
+        other: Texts
+      knowledge_base/sectionables/image:
+        one: Image
+        other: Images
+      knowledge_base/sectionables/gallery:
+        one: Gallery
+        other: Galleries
+      knowledge_base/sectionables/gallery/image:
+        one: Image
+        other: Images
+      knowledge_base/sectionables/list:
+        one: List
+        other: Lists
+      knowledge_base/sectionables/list/item:
+        one: List item
+        other: List items
+      knowledge_base/sectionables/links/list:
+        one: Link list
+        other: Link lists
+      knowledge_base/sectionables/links/link:
+        one: Link
+        other: Links
+      knowledge_base/sectionables/video:
+        one: Video
+        other: Videos
+
+    attributes:
+      common: &common
+        title: Title
+        slug: Slug
+        description: Description
+        position: Position
+        created_at: Created at
+        updated_at: Updated at
+
+      knowledge_base/category:
+        <<: *common
+        category: Category
+        category_id: Category
+        published_at: Published at
+      knowledge_base/article:
+        <<: *common
+        categories: Categories
+        category_article_assocations: Links between categories and articles
+        published_at: Published at
+        sections: Sections
+      knowledge_base/category_article_association:
+        <<: *common
+        article: Article
+        article_id: Article
+        category: Category
+        category_id: Category
+      knowledge_base/section:
+        <<: *common
+        sectionable: Sectionable
+        sectionable_type: Sectionable type
+      knowledge_base/sectionables/attachments/attachment:
+        <<: *common
+        file: File
+        title: Title
+      knowledge_base/sectionables/attachments/list:
+        <<: *common
+        attachments: Attachments
+        file: File
+        title: Title
+      knowledge_base/sectionables/text:
+        <<: *common
+        body: Body text
+        heading: Heading
+        lead: Lead paragraph
+        remove_image: Remove image
+      knowledge_base/sectionables/image:
+        <<: *common
+        caption: Image caption
+        image: Image
+      knowledge_base/sectionables/gallery:
+        <<: *common
+      knowledge_base/sectionables/gallery/image:
+        <<: *common
+        caption: Image caption
+        image: Image
+      knowledge_base/sectionables/list:
+        <<: *common
+        remove_image: Remove image
+      knowledge_base/sectionables/list/item:
+        <<: *common
+        body: Body text
+      knowledge_base/sectionables/links/list:
+        <<: *common
+      knowledge_base/sectionables/links/link:
+        <<: *common
+        url: URL
+      knowledge_base/sectionables/video:
+        <<: *common
+        url: URL
