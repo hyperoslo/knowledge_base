@@ -17,6 +17,8 @@ ActiveAdmin.register KnowledgeBase::Sectionables::List do
       f.input :image, hint: image_hint
       f.input :remove_image, as: :boolean
 
+      f.input :custom_style
+
       f.has_many :items, sortable: :position do |f|
         f.input :title
         f.input :body

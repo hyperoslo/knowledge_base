@@ -7,6 +7,8 @@ ActiveAdmin.register KnowledgeBase::Sectionables::Image do
 
       image_hint = f.object.new_record? ? nil : f.template.image_tag(f.object.image.medium)
       f.input :image, hint: image_hint
+
+      f.input :custom_style
     end
 
     f.actions
