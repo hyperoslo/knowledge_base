@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140430112633) do
+ActiveRecord::Schema.define(version: 20140820114750) do
 
   create_table "knowledge_base_articles", force: true do |t|
     t.string   "title"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20140430112633) do
     t.string  "file"
     t.integer "attachment_list_id"
     t.text    "description"
+    t.string  "custom_style"
   end
 
   add_index "knowledge_base_sectionables_attachments_attachments", ["attachment_list_id"], name: "index_knowledge_base_attachments_on_attachment_list_id"
@@ -59,6 +60,7 @@ ActiveRecord::Schema.define(version: 20140430112633) do
   create_table "knowledge_base_sectionables_attachments_lists", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "custom_style"
   end
 
   create_table "knowledge_base_sectionables_galleries", force: true do |t|
@@ -66,15 +68,17 @@ ActiveRecord::Schema.define(version: 20140430112633) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "custom_style"
   end
 
   create_table "knowledge_base_sectionables_gallery_images", force: true do |t|
     t.string   "caption"
     t.string   "image"
-    t.integer  "position",   default: 0
+    t.integer  "position",     default: 0
     t.integer  "gallery_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "custom_style"
   end
 
   add_index "knowledge_base_sectionables_gallery_images", ["gallery_id"], name: "index_knowledge_base_sectionables_gallery_images_on_gallery_id"
@@ -84,30 +88,34 @@ ActiveRecord::Schema.define(version: 20140430112633) do
     t.string   "image"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "custom_style"
   end
 
   create_table "knowledge_base_sectionables_links_links", force: true do |t|
     t.string   "title"
     t.string   "url"
-    t.integer  "position",   default: 0
+    t.integer  "position",     default: 0
     t.integer  "links_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "description"
+    t.string   "custom_style"
   end
 
   create_table "knowledge_base_sectionables_links_lists", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "custom_style"
   end
 
   create_table "knowledge_base_sectionables_list_items", force: true do |t|
     t.string   "title"
     t.text     "body"
-    t.integer  "position",   default: 0
+    t.integer  "position",     default: 0
     t.integer  "list_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "custom_style"
   end
 
   add_index "knowledge_base_sectionables_list_items", ["list_id"], name: "index_knowledge_base_sectionables_list_items_on_list_id"
@@ -118,6 +126,7 @@ ActiveRecord::Schema.define(version: 20140430112633) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
+    t.string   "custom_style"
   end
 
   create_table "knowledge_base_sectionables_texts", force: true do |t|
@@ -127,12 +136,14 @@ ActiveRecord::Schema.define(version: 20140430112633) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
+    t.string   "custom_style"
   end
 
   create_table "knowledge_base_sectionables_videos", force: true do |t|
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "custom_style"
   end
 
   create_table "knowledge_base_sections", force: true do |t|
