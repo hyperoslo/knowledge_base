@@ -85,6 +85,32 @@ should probably install it instead of writing your own:
 $ rails generate knowledge_base:active_admin
 ```
 
+### Custom styles
+
+Oftentimes we notice the need for sectionables of the same type with different
+styles. E.g. some text sectionables with black text and other text sectionables
+with orange text. It just so happens that you can add custom styles to your
+sectionables through the configuration. Considering the scenario with black and
+orange text sectionables, you would write something like this:
+
+```ruby
+KnowledgeBase.configure do |config|
+  config.custom_styles = {
+    "KnowledgeBase::Sectionables::Text" => [ :black, :orange ]
+  }
+end
+```
+
+Now each text sectionable can be given an orange or a black style, which can be
+accessed like any other attribute on the sectionable. Using this attribute, you
+could give the element a CSS class to achieve the correct styling:
+
+```
+<div class="text <%= @text.custom_style %>">
+  <%= simple_format @text.body %>
+</div>
+```
+
 ## Contributing
 
 1. Fork it
