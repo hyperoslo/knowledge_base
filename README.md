@@ -95,7 +95,7 @@ orange text sectionables, you would write something like this:
 
 ```ruby
 KnowledgeBase.configure do |config|
-  config.custom_styles = {
+  config.custom_section_styles = {
     text: [ :black, :orange ]
   }
 end
