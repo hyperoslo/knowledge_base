@@ -96,7 +96,7 @@ orange text sectionables, you would write something like this:
 ```ruby
 KnowledgeBase.configure do |config|
   config.custom_styles = {
-    "KnowledgeBase::Sectionables::Text" => [ :black, :orange ]
+    text: [ :black, :orange ]
   }
 end
 ```

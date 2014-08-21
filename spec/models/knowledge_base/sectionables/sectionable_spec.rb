@@ -19,7 +19,7 @@ module KnowledgeBase
       context "when styles are configured" do
         before do
           KnowledgeBase.config.custom_section_styles = {
-            "KnowledgeBase::Sectionables::Text" => [:red]
+            text: [ :red ]
           }
 
           described_class.inherited child

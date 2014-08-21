@@ -3,7 +3,8 @@ module KnowledgeBase::Sectionables
     extend Enumerize
 
     def self.inherited(child)
-      styles = KnowledgeBase.config.custom_section_styles[child.name] || [ ]
+      model_name = snake_case_class_name child.name
+      styles = KnowledgeBase.config.custom_section_styles[model_name] || [ ]
       child.enumerize :custom_style, in: styles
 
       super
@@ -14,5 +15,12 @@ module KnowledgeBase::Sectionables
     def to_s
       self.class.model_name.human
     end
+
+    private
+
+    def self.snake_case_class_name(class_name)
+      class_name.gsub("KnowledgeBase::Sectionables::", "").underscore.gsub("/", "_").to_sym
+    end
+
   end
 end
