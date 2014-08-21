@@ -9,9 +9,9 @@
 
   <div class="sections">
     <% article.sections.each do |section| %>
-    <div class="<%= section.sectionable.class.name.demodulize.downcase %> section">
-      <%= render section.sectionable %>
-    </div>
+      <div class="<%= section.sectionable.class.name.demodulize.downcase %> section <%= section.sectionable.style %>">
+        <%= render section.sectionable %>
+      </div>
     <% end %>
   </div>
 </div>
