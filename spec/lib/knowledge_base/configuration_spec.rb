@@ -21,4 +21,10 @@ describe KnowledgeBase::Configuration do
       expect(subject.articles_path).to eq 'articles'
     end
   end
+
+  describe '#section_styles' do
+    it 'should default to an empty hash' do
+      expect(subject.section_styles).to eq({ })
+    end
+  end
 end

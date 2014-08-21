@@ -56,6 +56,9 @@ nb:
         created_at: Opprettet
         updated_at: Sist oppdatert
 
+      sectionables: &sectionables
+        style: Utseende
+
       knowledge_base/category:
         <<: *common
         category: Kategori
@@ -83,36 +86,43 @@ nb:
         file: File
       knowledge_base/sectionables/attachments/list:
         <<: *common
+        <<: *sectionables
         attachments: Vedlegg
         title: Tittel
         file: File
       knowledge_base/sectionables/text:
         <<: *common
+        <<: *sectionables
         heading: Overskrift
         lead: Ingress
         body: Brødtekst
         remove_image: Fjern bilde
       knowledge_base/sectionables/image:
         <<: *common
+        <<: *sectionables
         image: Bilde
         caption: Bildetekst
       knowledge_base/sectionables/gallery:
         <<: *common
+        <<: *sectionables
       knowledge_base/sectionables/gallery/image:
         <<: *common
         caption: Bildetekst
         image: Bilde
       knowledge_base/sectionables/list:
         <<: *common
+        <<: *sectionables
         remove_image: Fjern bilde
       knowledge_base/sectionables/list/item:
         <<: *common
         body: Brødtekst
       knowledge_base/sectionables/links/list:
         <<: *common
+        <<: *sectionables
       knowledge_base/sectionables/links/link:
         <<: *common
         url: Adresse
       knowledge_base/sectionables/video:
         <<: *common
+        <<: *sectionables
         url: Adresse

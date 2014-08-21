@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140430112633) do
+ActiveRecord::Schema.define(version: 20140821085102) do
 
   create_table "knowledge_base_articles", force: true do |t|
     t.string   "title"
@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 20140430112633) do
   create_table "knowledge_base_sectionables_attachments_lists", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "style"
   end
 
   create_table "knowledge_base_sectionables_galleries", force: true do |t|
@@ -66,6 +67,7 @@ ActiveRecord::Schema.define(version: 20140430112633) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "style"
   end
 
   create_table "knowledge_base_sectionables_gallery_images", force: true do |t|
@@ -84,12 +86,13 @@ ActiveRecord::Schema.define(version: 20140430112633) do
     t.string   "image"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "style"
   end
 
   create_table "knowledge_base_sectionables_links_links", force: true do |t|
     t.string   "title"
     t.string   "url"
-    t.integer  "position",   default: 0
+    t.integer  "position",    default: 0
     t.integer  "links_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -99,6 +102,7 @@ ActiveRecord::Schema.define(version: 20140430112633) do
   create_table "knowledge_base_sectionables_links_lists", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "style"
   end
 
   create_table "knowledge_base_sectionables_list_items", force: true do |t|
@@ -118,6 +122,7 @@ ActiveRecord::Schema.define(version: 20140430112633) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
+    t.string   "style"
   end
 
   create_table "knowledge_base_sectionables_texts", force: true do |t|
@@ -127,12 +132,14 @@ ActiveRecord::Schema.define(version: 20140430112633) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
+    t.string   "style"
   end
 
   create_table "knowledge_base_sectionables_videos", force: true do |t|
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "style"
   end
 
   create_table "knowledge_base_sections", force: true do |t|

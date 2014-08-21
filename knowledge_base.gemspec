@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
   s.add_dependency "faker"
   s.add_dependency "mini_magick"
   s.add_dependency "ransack"
+  s.add_dependency "enumerize", "~> 0.8"
 
   s.add_development_dependency "pry-rails"
   s.add_development_dependency "guard-rspec"

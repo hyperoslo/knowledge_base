@@ -59,6 +59,9 @@ en:
         created_at: Created at
         updated_at: Updated at
 
+      sectionables: &sectionables
+        style: Style
+
       knowledge_base/category:
         <<: *common
         category: Category
@@ -86,36 +89,43 @@ en:
         title: Title
       knowledge_base/sectionables/attachments/list:
         <<: *common
+        <<: *sectionables
         attachments: Attachments
         file: File
         title: Title
       knowledge_base/sectionables/text:
         <<: *common
+        <<: *sectionables
         body: Body text
         heading: Heading
         lead: Lead paragraph
         remove_image: Remove image
       knowledge_base/sectionables/image:
         <<: *common
+        <<: *sectionables
         caption: Image caption
         image: Image
       knowledge_base/sectionables/gallery:
         <<: *common
+        <<: *sectionables
       knowledge_base/sectionables/gallery/image:
         <<: *common
         caption: Image caption
         image: Image
       knowledge_base/sectionables/list:
         <<: *common
+        <<: *sectionables
         remove_image: Remove image
       knowledge_base/sectionables/list/item:
         <<: *common
         body: Body text
       knowledge_base/sectionables/links/list:
         <<: *common
+        <<: *sectionables
       knowledge_base/sectionables/links/link:
         <<: *common
         url: URL
       knowledge_base/sectionables/video:
         <<: *common
+        <<: *sectionables
         url: URL
