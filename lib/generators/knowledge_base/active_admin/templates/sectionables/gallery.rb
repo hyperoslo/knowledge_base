@@ -14,7 +14,7 @@ ActiveAdmin.register KnowledgeBase::Sectionables::Gallery do
       f.input :title
       f.input :description
 
-      f.input :custom_style
+      f.input :style
 
       f.has_many :images, sortable: :position do |f|
         f.input :caption

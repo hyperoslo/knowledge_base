@@ -17,7 +17,7 @@ ActiveAdmin.register KnowledgeBase::Sectionables::Attachments::List do
       f.input :file
       f.input :description
 
-      f.input :custom_style
+      f.input :style
     end
 
     f.actions

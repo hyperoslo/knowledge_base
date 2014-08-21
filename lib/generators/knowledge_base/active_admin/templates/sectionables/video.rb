@@ -14,7 +14,7 @@ ActiveAdmin.register KnowledgeBase::Sectionables::Video do
       row :address
       row :created_at
       row :updated_at
-      row :custom_style
+      row :style
     end
   end
 end

@@ -95,7 +95,7 @@ orange text sectionables, you would write something like this:
 
 ```ruby
 KnowledgeBase.configure do |config|
-  config.custom_section_styles = {
+  config.section_styles = {
     text: [ :black, :orange ]
   }
 end
@@ -106,7 +106,7 @@ accessed like any other attribute on the sectionable. Using this attribute, you
 could give the element a CSS class to achieve the correct styling:
 
 ```
-<div class="text <%= @text.custom_style %>">
+<div class="text <%= @text.style %>">
   <%= simple_format @text.body %>
 </div>
 ```

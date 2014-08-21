@@ -11,7 +11,7 @@ ActiveAdmin.register KnowledgeBase::Sectionables::Text do
       f.input :image, hint: image_hint
       f.input :remove_image, as: :boolean
 
-      f.input :custom_style
+      f.input :style
     end
 
     f.actions

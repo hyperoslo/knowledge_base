@@ -22,9 +22,9 @@ describe KnowledgeBase::Configuration do
     end
   end
 
-  describe '#custom_section_styles' do
+  describe '#section_styles' do
     it 'should default to an empty hash' do
-      expect(subject.custom_section_styles).to eq({ })
+      expect(subject.section_styles).to eq({ })
     end
   end
 end

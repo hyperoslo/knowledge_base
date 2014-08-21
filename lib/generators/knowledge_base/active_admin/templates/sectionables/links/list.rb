@@ -16,7 +16,7 @@ ActiveAdmin.register KnowledgeBase::Sectionables::Links::List do
       f.input :description
       f.input :url
 
-      f.input :custom_style
+      f.input :style
     end
 
     f.actions

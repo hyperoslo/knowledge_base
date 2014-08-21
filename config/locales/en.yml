@@ -60,7 +60,7 @@ en:
         updated_at: Updated at
 
       sectionables: &sectionables
-        custom_style: Custom style
+        style: Style
 
       knowledge_base/category:
         <<: *common

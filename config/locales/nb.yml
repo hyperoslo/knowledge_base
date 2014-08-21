@@ -57,7 +57,7 @@ nb:
         updated_at: Sist oppdatert
 
       sectionables: &sectionables
-        custom_style: Tilpasset utseende
+        style: Utseende
 
       knowledge_base/category:
         <<: *common

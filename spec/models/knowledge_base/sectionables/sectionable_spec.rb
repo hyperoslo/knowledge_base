@@ -7,18 +7,18 @@ module KnowledgeBase
 
       context "when no styles are configured" do
         before do
-          KnowledgeBase.config.custom_section_styles = { }
+          KnowledgeBase.config.section_styles = { }
           described_class.inherited child
         end
 
         it "enumerizes over an empty array" do
-          expect(KnowledgeBase::Sectionables::Text.custom_style.options).to eq []
+          expect(KnowledgeBase::Sectionables::Text.style.options).to eq []
         end
       end
 
       context "when styles are configured" do
         before do
-          KnowledgeBase.config.custom_section_styles = {
+          KnowledgeBase.config.section_styles = {
             text: [ :red ]
           }
 
@@ -26,7 +26,7 @@ module KnowledgeBase
         end
 
         it "enumerizes over the configured styles" do
-          expect(KnowledgeBase::Sectionables::Text.custom_style.options).to eq [["Red", "red"]]
+          expect(KnowledgeBase::Sectionables::Text.style.options).to eq [["Red", "red"]]
         end
       end
     end

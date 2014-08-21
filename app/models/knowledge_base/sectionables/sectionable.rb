@@ -4,8 +4,8 @@ module KnowledgeBase::Sectionables
 
     def self.inherited(child)
       model_name = snake_case_class_name child.name
-      styles = KnowledgeBase.config.custom_section_styles[model_name] || [ ]
-      child.enumerize :custom_style, in: styles
+      styles = KnowledgeBase.config.section_styles[model_name] || [ ]
+      child.enumerize :style, in: styles
 
       super
     end
