@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140821085102) do
+ActiveRecord::Schema.define(version: 20140821151832) do
 
   create_table "knowledge_base_articles", force: true do |t|
     t.string   "title"
@@ -140,6 +140,7 @@ ActiveRecord::Schema.define(version: 20140821085102) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "style"
+    t.string   "title"
   end
 
   create_table "knowledge_base_sections", force: true do |t|
