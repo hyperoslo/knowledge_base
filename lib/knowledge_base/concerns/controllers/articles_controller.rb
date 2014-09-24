@@ -7,25 +7,25 @@ module KnowledgeBase
 
       def index
         if @category
-          @articles = @category.articles
+          scope = @category.articles
         else
-          @articles = Article.all
+          scope = Article.all
         end
 
-        @articles = @articles.published
+        scope = scope.published
 
-        @search   = @articles.search params[:q]
+        @search   = scope.search params[:q]
         @articles = @search.result.includes(:sections)
       end
 
       def show
         if @category
-          @article = @category.articles
+          scope = @category.articles
         else
-          @article = Article.all
+          scope = Article.all
         end
 
-        @article = @article.published.friendly.find params[:id]
+        @article = scope.published.friendly.find params[:id]
       end
 
       private
