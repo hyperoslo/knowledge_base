@@ -27,4 +27,28 @@ describe KnowledgeBase::Configuration do
       expect(subject.section_styles).to eq({ })
     end
   end
+
+  describe '#text_image_uploader' do
+    it 'should default to the KB uploader' do
+      expect(subject.text_image_uploader).to eq KnowledgeBase::ImageUploader
+    end
+  end
+
+  describe '#image_image_uploader' do
+    it 'should default to the KB uploader' do
+      expect(subject.image_image_uploader).to eq KnowledgeBase::ImageUploader
+    end
+  end
+
+  describe '#gallery_image_uploader' do
+    it 'should default to the KB uploader' do
+      expect(subject.gallery_image_uploader).to eq KnowledgeBase::ImageUploader
+    end
+  end
+
+  describe '#list_image_uploader' do
+    it 'should default to the KB uploader' do
+      expect(subject.list_image_uploader).to eq KnowledgeBase::ImageUploader
+    end
+  end
 end
