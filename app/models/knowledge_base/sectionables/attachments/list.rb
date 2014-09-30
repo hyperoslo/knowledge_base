@@ -7,7 +7,7 @@ module KnowledgeBase::Sectionables::Attachments
     accepts_nested_attributes_for :attachments, allow_destroy: true
 
     def to_s
-      title
+      "#{super} ##{id}: #{title}"
     end
   end
 end
