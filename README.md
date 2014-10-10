@@ -1,10 +1,10 @@
 # Knowledge Base
 
-[![Gem Version](https://img.shields.io/gem/v/knowledge_base.svg)](https://rubygems.org/gems/knowledge_base)
-[![Build Status](https://img.shields.io/travis/hyperoslo/knowledge_base.svg)](https://travis-ci.org/hyperoslo/knowledge_base)
-[![Dependency Status](https://img.shields.io/gemnasium/hyperoslo/knowledge_base.svg)](https://gemnasium.com/hyperoslo/knowledge_base)
-[![Code Climate](https://img.shields.io/codeclimate/github/hyperoslo/knowledge_base.svg)](https://codeclimate.com/github/hyperoslo/knowledge_base)
-[![Coverage Status](https://img.shields.io/coveralls/hyperoslo/knowledge_base.svg)](https://coveralls.io/r/hyperoslo/knowledge_base)
+[![Gem Version](https://img.shields.io/gem/v/knowledge_base.svg?style=flat)](https://rubygems.org/gems/knowledge_base)
+[![Build Status](https://img.shields.io/travis/hyperoslo/knowledge_base.svg?style=flat)](https://travis-ci.org/hyperoslo/knowledge_base)
+[![Dependency Status](https://img.shields.io/gemnasium/hyperoslo/knowledge_base.svg?style=flat)](https://gemnasium.com/hyperoslo/knowledge_base)
+[![Code Climate](https://img.shields.io/codeclimate/github/hyperoslo/knowledge_base.svg?style=flat)](https://codeclimate.com/github/hyperoslo/knowledge_base)
+[![Coverage Status](https://img.shields.io/coveralls/hyperoslo/knowledge_base.svg?style=flat)](https://coveralls.io/r/hyperoslo/knowledge_base)
 
 Knowledge Base is a bunch of models for Ruby on Rails that you probably need to build your own.
 
