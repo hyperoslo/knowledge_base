@@ -1,5 +1,5 @@
 module KnowledgeBase
   class Sectionables::List::Item < ActiveRecord::Base
-    belongs_to :list
+    include Concerns::Models::Sectionables::List::Item
   end
 end

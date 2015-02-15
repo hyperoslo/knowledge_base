@@ -1,6 +1,5 @@
 module KnowledgeBase
   class CategoryArticleAssociation < ActiveRecord::Base
-    belongs_to :category
-    belongs_to :article
+    include Concerns::Models::CategoryArticleAssociation
   end
 end
