@@ -1,11 +1,5 @@
-module KnowledgeBase::Sectionables
-  class Image < Sectionable
-    mount_uploader :image, KnowledgeBase.config.image_image_uploader
-
-    has_many :sections, as: :sectionable, dependent: :destroy
-
-    def to_s
-      "#{super} ##{id}: #{caption}"
-    end
+module KnowledgeBase
+  class Sectionables::Image < Sectionables::Sectionable
+    include Concerns::Models::Sectionables::Image
   end
 end
